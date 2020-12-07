@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen, act, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
  
 //https://www.robinwieruch.de/react-testing-library
@@ -64,3 +64,4 @@ describe('App', () => {
     ).toBeInTheDocument();
   });
 });
+

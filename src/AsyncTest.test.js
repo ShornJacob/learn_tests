@@ -16,6 +16,7 @@ describe('AsyncTest', () => {
         { objectID: '2', title: 'React' },
       ];
    
+      //axios' return value from its get method gets mocked
       axios.get.mockImplementationOnce(() =>
         Promise.resolve({ data: { hits: stories } })
       );
@@ -23,6 +24,7 @@ describe('AsyncTest', () => {
       render(<AsyncTest />);
    
       //click a button
+      //userEvent API to click to the button which leads us to the API request
       await userEvent.click(screen.getByRole('button'));
    
       //getBy, queryBy and findBy,which all can be associated with the search types (e.g. Text, Role, PlaceholderText, DisplayValue)
